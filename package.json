@@ -1,0 +1,28 @@
+{
+  "name": "firestore-query-builder",
+  "version": "0.0.0",
+  "description": "Abstracts firestore query procedures by adopting an object oriented development mechanism.",
+  "main": "index.js",
+  "repository": "https://github.com/McOtech/firestore-query-builder",
+  "author": "Paul Otieno",
+  "license": "MIT",
+  "engines": {
+    "node": "20.x",
+    "yarn": "1.x",
+    "npm": "please-use-yarn"
+  },
+  "scripts": {
+    "dev": "vitest",
+    "test": "vitest run",
+    "tsc:init": "tsc --init",
+    "build": "tsup src/index.ts --format cjs, esm --dts"
+  },
+  "resolutions": {
+    "webpack": "^5"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  }
+}
