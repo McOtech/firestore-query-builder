@@ -7,3 +7,23 @@ const firebaseApp = initializeApp({
   databaseURL: process.env.FIRESTORE_DB_URL,
 });
 export const firestoreDb = getFirestore(firebaseApp);
+
+export type Item = {
+  name: string;
+  age: number;
+};
+
+export const testItems: Item[] = [
+  {
+    name: 'Test1',
+    age: 10,
+  },
+  {
+    name: 'Test2',
+    age: 90,
+  },
+  {
+    name: 'Test4',
+    age: 100,
+  },
+];
