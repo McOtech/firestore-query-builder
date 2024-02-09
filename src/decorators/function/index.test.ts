@@ -175,4 +175,16 @@ describe('Function Level Decorators', () => {
     expect(targetClass.itemIds).includes(targetClass.items[0].id);
     console.log('Items:::>', targetClass.items);
   });
+
+  it('Retrieves specified attributes of the object', async () => {
+    const targetAttribute = 'items';
+    const result = targetClass.toJson([targetAttribute]);
+    expect(result).toHaveProperty(targetAttribute);
+    const resultDescriptor = Object.getOwnPropertyDescriptor(
+      result,
+      targetAttribute
+    );
+    expect(resultDescriptor?.value).toHaveLength(targetClass.items.length);
+    console.log('JSON Items:::>', result);
+  });
 });
