@@ -50,7 +50,8 @@ admin.json
 /.husky
 /.vscode
 /.yarn
-/.src
+/src
+.yarnrc.yml
 .env.*
 .eslintrc.*
 .eslintignore
